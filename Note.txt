@@ -1,0 +1,94 @@
+
+References:
+-----------
+-> Collection Framework::   https://www.javatpoint.com/collections-in-java
+-> Javadocs::
+   Collection:   https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html
+   List:         https://docs.oracle.com/javase/8/docs/api/java/util/List.html   
+   Queue:        https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html
+   Deque:        https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html
+   Set:          https://docs.oracle.com/javase/8/docs/api/java/util/Set.html
+
+
+
+--------------
+java.util.List 
+--------------
+-> Insertion order is maintained.
+-> Null is allowed.
+-> Duplicate elements are allowed.
+-> Elements can be added or removed at any position.
+-> Elements can be retrived/modified through indices.
+-> Implementations:
+   [1] java.util.ArrayList
+       * Internally uses dynamic array.
+   [2] java.util.LinkedList
+       * Internally uses doublly linked list.
+       * Faster than ArrayList as no bit-shifting is required.
+   [3] java.util.Vector
+       * Internally uses dynamic array just like java.util.ArrayList.
+       * It is synchronized.
+   [4] java.util.Stack
+       * It is a LIFO (Last In First Out) data structure i.e. last element 
+         can be removed first.
+       * Child class of java.util.Vector.
+
+
+
+---------------
+java.util.Queue
+---------------
+-> It is a FIFO (First In First Out) data structure i.e.
+   elements can be added at end point only and
+   elements at the starting point can be removed only.
+-> Null is not allowed.
+-> Duplicate elements are allowed. 
+-> Elements cannot be retrived/modified through indices.
+-> Implementations: 
+   [1] java.util.PriorityQueue
+       * Elements are ordered on the basis of natural ordering or by 
+         java.util.Comparator provided at queue construction time, 
+         depending on which constructor is used.
+   [2] java.util.ArrayDeque     
+       * Insertion order is maintained.
+
+
+
+---------------
+java.util.Deque
+---------------
+-> It inherits java.util.Queue interface and hence it has all the
+   behaviours of java.util.Queue interface.
+-> The only difference is, it is a "double ended queue" i.e,
+   an elment can be added or removed from the either end of
+   the collection.       
+-> Implementations:
+   [1] java.util.LinkedList
+   [2] java.util.ArrayDeque
+
+
+
+-------------
+java.util.Set
+-------------
+-> Duplicate elements are allowed but, no change will reflect i.e.
+   "all elements are unique".
+-> Elements cannot be retrived/modified through indices.
+-> Implementations:
+   [1] java.util.HashSet
+       * It uses hashing and hash tables are used for storing of elements.
+       * Insertion order is not maintained.
+       * Null is allowed.
+   [2] java.util.LinkedHashSet
+       * It is the linked list implementation of java.util.Set interface. 
+       * It extends java.util.HashSet class. 
+       * Insertion order is maintained.
+       * Null is allowed.
+   [3] java.util.TreeSet
+       * It implements java.util.SortedSet which inherits java.util.Set interface.
+       * Retrival of elements are quiet faster.
+       * Elements are sorted in ascending order in a tree like structure.
+       * Null is not allowed.
+
+
+
