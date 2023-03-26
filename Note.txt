@@ -8,6 +8,7 @@ References:
    Queue:        https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html
    Deque:        https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html
    Set:          https://docs.oracle.com/javase/8/docs/api/java/util/Set.html
+   SortedSet:    https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html
 
 
 
@@ -24,7 +25,7 @@ java.util.List
        * Internally uses dynamic array.
    [2] java.util.LinkedList
        * Internally uses doublly linked list.
-       * Faster than ArrayList as no bit-shifting is required.
+       * Manipulation is faster as no bit-shifting is required.
    [3] java.util.Vector
        * Internally uses dynamic array just like java.util.ArrayList.
        * It is synchronized.
@@ -40,8 +41,9 @@ java.util.Queue
 ---------------
 -> It is a FIFO (First In First Out) data structure i.e.
    elements can be added at end point only and
-   elements at the starting point can be removed only.
--> Null is not allowed.
+   element at the starting point can be removed only.
+-> Null is generally not allowed but, still there are some exceptions
+   like java.util.LinkedList.
 -> Duplicate elements are allowed. 
 -> Elements cannot be retrived/modified through indices.
 -> Implementations: 
@@ -51,6 +53,8 @@ java.util.Queue
          depending on which constructor is used.
    [2] java.util.ArrayDeque     
        * Insertion order is maintained.
+       * Faster than java.util.ArrayList and java.util.Stack and has 
+         no capacity restrictions.
 
 
 
@@ -61,7 +65,7 @@ java.util.Deque
    behaviours of java.util.Queue interface.
 -> The only difference is, it is a "double ended queue" i.e,
    an elment can be added or removed from the either end of
-   the collection.       
+   the collection. Operations can be performed on both the ends.       
 -> Implementations:
    [1] java.util.LinkedList
    [2] java.util.ArrayDeque
@@ -81,12 +85,14 @@ java.util.Set
        * Null is allowed.
    [2] java.util.LinkedHashSet
        * It is the linked list implementation of java.util.Set interface. 
-       * It extends java.util.HashSet class. 
+       * It is the child class of java.util.HashSet class. 
        * Insertion order is maintained.
        * Null is allowed.
    [3] java.util.TreeSet
        * It implements java.util.SortedSet which inherits java.util.Set interface.
-       * Retrival of elements are quiet faster.
+       * java.util.SortedSet provides a total ordering on it's elements and arrenges
+         them in ascending order.
+       * Access and retrival of elements are quiet faster.
        * Elements are sorted in ascending order in a tree like structure.
        * Null is not allowed.
 
