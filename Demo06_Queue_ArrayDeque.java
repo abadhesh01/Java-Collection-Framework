@@ -1,10 +1,10 @@
 
-import java.util.PriorityQueue;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class Demo5_Queue_PriorityQueue {
+public class Demo06_Queue_ArrayDeque {
     public static void main(String[] args) {
-        Queue<String> priorityQueue = new PriorityQueue<>();
+        Queue<String> priorityQueue = new ArrayDeque<>();
         CustomCollectionOperation.operateOn(priorityQueue);
     }
 }
