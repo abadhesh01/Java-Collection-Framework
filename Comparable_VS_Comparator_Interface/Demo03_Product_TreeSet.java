@@ -1,11 +1,12 @@
 
 package Comparable_VS_Comparator_Interface;
 
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Demo02_Product_TreeSet {
+public class Demo03_Product_TreeSet {
 
     // Printing all the collection of products.
     public static void showAllProducts(Set<Product> products) {
@@ -16,17 +17,25 @@ public class Demo02_Product_TreeSet {
     
     public static void main(String[] args) {
 
-        // Creating a collection of products.
-        Set<Product> products = new TreeSet<>();
+        // Lamda expression implmentation for compare() method of Comparator<T> 
+        // interface for sorting the collection of products in the order of product id. 
+        Comparator<Product> sortByProductId = (obj1, obj2) -> {
 
-        /*
-            Note:
-            -----
-            As the default constructor of TreeSet class has been 
-            called, the collection of products will be sorted on the 
-            basis of compareTo() method present in Comparable<T> 
-            interface implemented by Product class.
-        */
+            long obj1Id = obj1.getId(); 
+            long obj2Id = obj2.getId();
+            
+            if (obj1Id > obj2Id)
+                return 1;
+
+            if (obj1Id < obj2Id)
+                return -1;    
+            
+            return 0;
+        };
+
+        // Creating a collection of products by passing Comparator<T> interface
+        // implementation as an arguement through TreeSet constructor.
+        Set<Product> products = new TreeSet<>(sortByProductId);
 
         // Printing collection type.
         System.out.println("\nCollection Type: " + products.getClass().getName());

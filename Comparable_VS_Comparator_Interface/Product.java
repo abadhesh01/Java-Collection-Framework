@@ -3,6 +3,7 @@ package Comparable_VS_Comparator_Interface;
 
 public class Product implements Comparable<Product> {
     
+    // Fields
     private long id;
     private String name;
     private String type;
@@ -37,19 +38,21 @@ public class Product implements Comparable<Product> {
         this.type = type;
     }
 
-    // To String.
+    // Convert to String.
     @Override
     public String toString() {
         return "\nProduct [id=" + id + ", name=" + name + ", type=" + type + "]";
     }
+
+    // Compare to anathor product.
     @Override
     public int compareTo(Product product) {
         
         if (this.id > product.getId())
-            return -1;
+            return 1;
 
         if (this.id < product.getId())
-            return 1;
+            return -1;
     
         return 0;
     }

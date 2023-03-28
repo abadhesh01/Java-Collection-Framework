@@ -1,0 +1,30 @@
+
+
+                   -----------------------------------------
+                   Comparable<T> v/s Comparator<T> interface
+                   -----------------------------------------
+
+* Both Comparable<T> and Comparator<T> are functional interfaces.
+  [Note: Functional interfaces have only one abstract method and they
+   are used for writing lamda expressions from Java 8 and onwards.]
+
+* There are some differences between Comparable<T> and Comparator<T> interfaces.
+  They are -
+
+   ----------------------------------------------------------------------------------------------------
+   | Sl.No.     |     Comparable<T> interface           |       Comparator<T> interface               |   
+   ----------------------------------------------------------------------------------------------------
+   |   1        |     Present in java.lang package.     |       Present in java.util package.         |
+   |---------------------------------------------------------------------------------------------------                  
+   |   2        |     Provides single sorting sequence. |       Provides multiple sorting sequence.   |
+   |---------------------------------------------------------------------------------------------------
+   |   3        |     Method present:                   |       Method present:                       |
+   |            |      public int compareTo(T obj)      |        int compare(T obj1, T obj2)          |
+   ----------------------------------------------------------------------------------------------------
+
+* For more refer to:
+  [1] Comparable<T> interface:: https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html
+  [2] Comparator<T> interface:: https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html
+
+
+  
